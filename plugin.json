@@ -1,0 +1,9 @@
+{
+    "name": "ResultFieldsStock",
+    "namespace": "ResultFieldsStock",
+    "type": "template",
+    "version": "1.0.0",
+    "description": "Extends ResultFields with stock data for the shop.",
+    "author": "cellePhone e.K.",
+    "serviceProvider": "ResultFieldsStock\\Providers\\ResultFieldsStockServiceProvider"
+}
