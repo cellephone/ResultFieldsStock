@@ -112,5 +112,6 @@
     "variationProperties.*",
     "tags.id",
     "tags.names.*",
-  "stock.*"
+    "stock.*"
 ]
+
