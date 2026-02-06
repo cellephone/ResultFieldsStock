@@ -1,9 +1,12 @@
 {
-    "name": "ResultFieldsStock",
-    "namespace": "ResultFieldsStock",
-    "type": "template",
+    "name": "CeresStockFix",
+    "namespace": "CeresStockFix",
+    "author": "Anton Fischer",
+    "type": "theme",
     "version": "1.0.0",
-    "description": "Extends ResultFields with stock data for the shop.",
-    "author": "cellePhone e.K.",
-    "serviceProvider": "ResultFieldsStock\\Providers\\ResultFieldsStockServiceProvider"
+    "description": "Ergänzt stock.* in ResultFields",
+    "require": {
+        "Ceres": "~5.0"
+    },
+    "serviceProvider": null
 }
