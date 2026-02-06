@@ -1,12 +1,16 @@
 {
     "name": "CeresStockFix",
     "namespace": "CeresStockFix",
-    "author": "Anton Fischer",
     "type": "theme",
     "version": "1.0.0",
-    "description": "Ergänzt stock.* in ResultFields",
     "require": {
         "Ceres": "~5.0"
     },
+    "description": "Ergänzt stock.* in ResultFields",
+    "author": "Anton Fischer",
+    "email": "info@cellephone.de",
+    "phone": "0123456789",
+    "authorIcon": "icon_author.png",
+    "pluginIcon": "icon_plugin.png",
     "serviceProvider": null
 }
