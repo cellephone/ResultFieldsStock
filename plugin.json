@@ -1,6 +1,6 @@
 {
-    "name": "CeresStockFix",
-    "namespace": "CeresStockFix",
+    "name": "ResultFieldsStock",
+    "namespace": "ResultFieldsStock",
     "type": "theme",
     "version": "1.0.0",
     "require": {
@@ -14,3 +14,4 @@
     "pluginIcon": "icon_plugin.png",
     "serviceProvider": null
 }
+
