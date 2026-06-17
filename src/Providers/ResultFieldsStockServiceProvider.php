@@ -3,7 +3,8 @@
 namespace ResultFieldsStock\Providers;
 
 use Plenty\Plugin\ServiceProvider;
-use IO\Services\ItemSearch\Helper\ResultFieldTemplate;
+use Plenty\Plugin\Events\Dispatcher;
+use IO\Helper\TemplateContainer;
 
 class ResultFieldsStockServiceProvider extends ServiceProvider
 {
@@ -11,9 +12,15 @@ class ResultFieldsStockServiceProvider extends ServiceProvider
     {
     }
 
-    public function boot()
+    public function boot(Dispatcher $eventDispatcher)
     {
-        pluginApp(ResultFieldTemplate::class)
-            ->addResultField('ResultFieldsStock::ResultFields/SingleItem');
+        $eventDispatcher->listen(
+            'IO.ctx.item',
+            function(TemplateContainer $templateContainer)
+            {
+                $templateContainer->setTemplate('ResultFieldsStock::ResultFields.SingleItem');
+            },
+            0
+        );
     }
 }
