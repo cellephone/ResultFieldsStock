@@ -1,7 +1,7 @@
 {
     "name": "ResultFieldsStock",
     "namespace": "ResultFieldsStock",
-    "type": "theme",
+    "type": "general",
     "version": "1.0.0",
     "require": {
         "Ceres": "~5.0"
