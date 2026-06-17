@@ -8,9 +8,5 @@
     },
     "description": "Ergänzt stock.* in ResultFields",
     "author": "Anton Fischer",
-    "email": "info@cellephone.de",
-    "phone": "0123456789",
-    "authorIcon": "icon_author.png",
-    "pluginIcon": "icon_plugin.png",
     "serviceProvider": "ResultFieldsStock\\Providers\\ResultFieldsStockServiceProvider"
 }
