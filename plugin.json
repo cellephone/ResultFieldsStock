@@ -12,6 +12,5 @@
     "phone": "0123456789",
     "authorIcon": "icon_author.png",
     "pluginIcon": "icon_plugin.png",
-    "serviceProvider": null
+    "serviceProvider": "ResultFieldsStock\\Providers\\ResultFieldsStockServiceProvider"
 }
-
