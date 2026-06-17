@@ -3,8 +3,7 @@
 namespace ResultFieldsStock\Providers;
 
 use Plenty\Plugin\ServiceProvider;
-use Plenty\Plugin\Events\Dispatcher;
-use IO\Helper\TemplateContainer;
+use Plenty\Modules\Webshop\ItemSearch\Services\ItemSearchService;
 
 class ResultFieldsStockServiceProvider extends ServiceProvider
 {
@@ -12,15 +11,10 @@ class ResultFieldsStockServiceProvider extends ServiceProvider
     {
     }
 
-    public function boot(Dispatcher $eventDispatcher)
+    public function boot(ItemSearchService $itemSearchService)
     {
-        $eventDispatcher->listen(
-            'IO.ctx.item',
-            function(TemplateContainer $templateContainer)
-            {
-                $templateContainer->setTemplate('ResultFieldsStock::ResultFields.SingleItem');
-            },
-            0
-        );
+        // Fügt die Felder direkt in die Suche des Webshops ein
+        $itemSearchService->getSearchFactory()
+            ->withResultFields('ResultFieldsStock::ResultFields.SingleItem');
     }
 }
