@@ -14,6 +14,6 @@ class ResultFieldsStockServiceProvider extends ServiceProvider
     public function boot()
     {
         pluginApp(ResultFieldTemplate::class)
-            ->addResultField('ResultFieldsStock::ResultFields.SingleItem');
+            ->addResultField('ResultFieldsStock::ResultFields/SingleItem');
     }
 }
