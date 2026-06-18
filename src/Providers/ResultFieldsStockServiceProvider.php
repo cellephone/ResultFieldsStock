@@ -3,7 +3,7 @@
 namespace ResultFieldsStock\Providers;
 
 use Plenty\Plugin\ServiceProvider;
-use Plenty\Modules\Webshop\ItemSearch\Services\ItemSearchService;
+use Plenty\Modules\Webshop\ItemSearch\Helpers\ResultFieldTemplate;
 
 class ResultFieldsStockServiceProvider extends ServiceProvider
 {
@@ -11,10 +11,14 @@ class ResultFieldsStockServiceProvider extends ServiceProvider
     {
     }
 
-    public function boot(ItemSearchService $itemSearchService)
+    public function boot()
     {
-        // Fügt die Felder direkt in die Suche des Webshops ein
-        $itemSearchService->getSearchFactory()
-            ->withResultFields('ResultFieldsStock::ResultFields.SingleItem');
+        // Holt die ResultFieldTemplate-Klasse, genau wie Ceres es tut
+        $templateContainer = pluginApp(ResultFieldTemplate::class);
+
+        // Fügt deine JSON-Datei zum SingleItem-Template HINZU
+        $templateContainer->setTemplates([
+            ResultFieldTemplate::TEMPLATE_SINGLE_ITEM => 'ResultFieldsStock::ResultFields.SingleItem'
+        ]);
     }
 }
